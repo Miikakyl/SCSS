@@ -1,0 +1,131 @@
+body {
+    font-family: 'Oswald', sans-serif;
+    
+}
+div[class*="navbar-collapse"] {
+    justify-content: flex-end;
+}
+.navbar-nav > a:hover {
+    border-bottom: 1px solid lightgrey;
+}
+.container-heroSection {
+    min-height: 700px;
+    background-position: center;
+    background-size: cover;
+    position:relative;
+    height: 100%;
+    width: 100%;
+}
+#firstPageBg {
+    background-image: url(../photos/oulu.jpg);
+}
+#scndPageBg {
+    background-image: url(../photos/ouluB.jpg);
+}
+#thirdPageBg {
+    background-image: url(../photos/ouluC.jpg);
+}
+.container-heroSection h1 {
+    font-size: 5rem;
+    color:white;
+}
+#heroSection {
+    text-align: center;
+    font-size: 2rem;
+}
+.container-content {
+    height: fit-content;
+    min-height: 900px;
+    
+}
+.blurry-bg {
+    height: 50px;
+    filter: blur(100px);
+    width: 100%;
+    background: rgb(17,141,218);
+    background: linear-gradient(90deg, rgba(17,141,218,1) 0%, rgba(10,98,154,1) 100%);
+}
+.statsAccordion{
+    position: absolute;
+}
+.text-area {
+    text-align: center;
+}
+.container-content h1 {
+    font-size: 3rem;
+    text-align:center;
+}
+.scrollUpBtn {
+    height: 50px;
+    width: fit-content;
+
+}
+.scrollUpBtn > ion-icon {
+    color:white;
+    height: 40px;
+    width: 50px;    
+}
+
+#infoContainer {
+    width: fit-content !important;
+}
+#infoContainer * {
+    width: 300px;
+}
+.container-footer {
+    min-height: 100px;
+    position:relative;
+}
+.btnLinks {
+    width: fit-content;
+}
+.container-footer ion-icon {
+    min-height: 30px; 
+    min-width: 30px;  
+}
+.card {
+    width: 250px;
+    border-radius: 8px;
+}
+.card-title {
+    text-align: center;
+}
+.pageBtns {
+    width: 40%;
+    height: 70px;
+}
+#btnShow {
+    animation-name: btnAnimation;
+    animation-duration: 3s;
+}
+
+@keyframes btnAnimation {
+    from {
+        opacity: 0%;
+    }
+    to {
+       opacity: 100%;
+    }
+}
+
+
+@media (max-width: 957px) {
+
+    .text-area {
+        padding: 0px !important;
+    }
+    #sendBtn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 766px) 
+{
+    a[class*="pageBtns"] {
+        width: 100%;
+    }
+
+    .statsAccordion{
+        position: static;
+    }
+}
