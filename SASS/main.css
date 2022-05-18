@@ -1,13 +1,15 @@
 body {
-  font-family: "Oswald", sans-serif;
+  font-family: 'Oswald', sans-serif;
 }
 
-div[class*=navbar-collapse] {
-  justify-content: flex-end;
+div[class*="navbar-collapse"] {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .navbar-nav a:hover {
-  border-bottom: 1px solid rgb(255, 233, 233);
+  border-bottom: 1px solid #ffe9e9;
 }
 
 .container-heroSection {
@@ -18,9 +20,10 @@ div[class*=navbar-collapse] {
   height: 100%;
   width: 100%;
 }
+
 .container-heroSection h1 {
   font-size: 5rem;
-  color: rgb(255, 233, 233);
+  color: #ffe9e9;
 }
 
 #firstPageBg {
@@ -41,25 +44,35 @@ div[class*=navbar-collapse] {
 }
 
 .container-content {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   min-height: 900px;
 }
+
 .container-content .statsAccordion {
   position: absolute;
 }
+
 .container-content .text-area {
   text-align: center;
 }
+
 .container-content #infoContainer {
+  width: -webkit-fit-content !important;
+  width: -moz-fit-content !important;
   width: fit-content !important;
 }
+
 .container-content #infoContainer > * {
   width: 300px;
 }
+
 .container-content .pageBtns {
   width: 40%;
   height: 70px;
 }
+
 .container-content h1 {
   font-size: 3rem;
   text-align: center;
@@ -67,18 +80,23 @@ div[class*=navbar-collapse] {
 
 .blurry-bg {
   height: 50px;
-  filter: blur(100px);
+  -webkit-filter: blur(100px);
+          filter: blur(100px);
   width: 100%;
-  background: rgb(17, 141, 218);
-  background: linear-gradient(90deg, rgb(17, 141, 218) 0%, rgb(10, 98, 154) 100%);
+  background: #118dda;
+  background: -webkit-gradient(linear, left top, right top, from(#118dda), to(#0a629a));
+  background: linear-gradient(90deg, #118dda 0%, #0a629a 100%);
 }
 
 .scrollUpBtn {
   height: 50px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
 }
+
 .scrollUpBtn ion-icon {
-  color: rgb(255, 233, 233);
+  color: #ffe9e9;
   height: 40px;
   width: 50px;
 }
@@ -87,9 +105,13 @@ div[class*=navbar-collapse] {
   min-height: 100px;
   position: relative;
 }
+
 .container-footer .btnLinks {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
 }
+
 .container-footer ion-icon {
   min-height: 30px;
   min-width: 30px;
@@ -99,13 +121,25 @@ div[class*=navbar-collapse] {
   width: 250px;
   border-radius: 8px;
 }
+
 .card .card-title {
   text-align: center;
 }
 
 #btnShow {
-  animation-name: btnAnimation;
-  animation-duration: 3s;
+  -webkit-animation-name: btnAnimation;
+          animation-name: btnAnimation;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+@-webkit-keyframes btnAnimation {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
 }
 
 @keyframes btnAnimation {
@@ -116,15 +150,16 @@ div[class*=navbar-collapse] {
     opacity: 100%;
   }
 }
+
 @media (max-width: 957px) {
   .text-area {
     padding: 0px !important;
   }
-
   #sendBtn {
     width: 100%;
   }
 }
+
 @media (max-width: 766px) {
   .container-content .pageBtns {
     width: 100%;
@@ -133,5 +168,4 @@ div[class*=navbar-collapse] {
     position: static;
   }
 }
-
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=main.css.map */
